@@ -1,0 +1,26 @@
+.root {
+  .header {
+    padding-bottom: 20px;
+  }
+
+  .problem-card {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    .title {
+      font-size: 20px;
+      font-weight: bold;
+      padding-bottom: 10px;
+    }
+    .description {
+      font-size: 16px;
+      font-weight: normal;
+      font-style: italic;
+      white-space: pre-wrap;
+    }
+    .answer {
+      font-size: 16px;
+      font-weight: bold;
+      padding-top: 10px;
+    }
+  }
+}

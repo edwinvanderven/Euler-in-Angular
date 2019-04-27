@@ -1,0 +1,16 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="root">
+  <h1 class="header">
+    Welcome to {{ title }}!
+  </h1>
+
+  <div *ngFor="let problem of problems">
+    <div class="problem-card">
+      <div class="title">{{ problem.title }}</div>
+      <div class="description">{{ problem.description }}</div>
+      <div class="answer">This answer is {{ getAnswer(problem.answer) }}</div>
+      <hr>
+    </div>
+  </div>
+</div>
+
