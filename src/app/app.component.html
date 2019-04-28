@@ -8,7 +8,7 @@
     <div class="problem-card">
       <div class="title">{{ problem.title }}</div>
       <div class="description">{{ problem.description }}</div>
-      <div class="answer">This answer is {{ getAnswer(problem.answer) }}</div>
+      <div class="answer">The answer is {{ problem.getAnswer() }}</div>
       <hr>
     </div>
   </div>

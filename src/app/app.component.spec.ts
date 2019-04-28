@@ -28,12 +28,4 @@ describe('AppComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain('Welcome to euler-in-angular!');
   });
-
-  describe('getAnswer', () => {
-    it('should return the correct answer for the first question', () => {
-      const fixture = TestBed.createComponent(AppComponent);
-      const app = fixture.debugElement.componentInstance;
-      expect(app.getAnswer(1)).toEqual('first');
-    });
-  });
 });
