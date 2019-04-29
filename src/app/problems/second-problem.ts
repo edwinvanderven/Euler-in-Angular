@@ -7,7 +7,23 @@ export class SecondProblem implements IProblem{
                         '\nBy considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.';
   
   getAnswer(): string {
-    return 'second answer';
+    const length = 4000000;
+
+    let result = 0;
+    let current = 1;
+    let next = 2;
+
+    while (current <= length) {
+      if (current % 2 === 0) {
+        result += current;
+      }
+
+      const tmp = current + next;
+      current = next;
+      next = tmp;
+    }
+
+    return result.toString();
   }
 }
 

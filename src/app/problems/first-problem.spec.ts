@@ -1,17 +1,17 @@
 import { FirstProblem } from './first-problem';
 
 describe('FirstProblem', () => {
-  let first: FirstProblem;
+  let problem: FirstProblem;
 
   beforeEach(() => {
-    first = new FirstProblem();
+    problem = new FirstProblem();
   });
 
   it('should exist', () => {
-    expect(first).toBeDefined();
+    expect(problem).toBeDefined();
   });
 
   it('should return the correct answer', () => {
-    expect(first.getAnswer()).toEqual('233168');
+    expect(problem.getAnswer()).toEqual('233168');
   });
 });

@@ -8,6 +8,6 @@ export interface IProblem {
 }
 
 export const PROBLEMS: IProblem[] = [
-  new FirstProblem(),
-  new SecondProblem()
+  new SecondProblem(),
+  new FirstProblem()
 ];
