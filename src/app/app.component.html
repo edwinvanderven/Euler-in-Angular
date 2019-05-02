@@ -1,14 +1,14 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <div class="root">
   <h1 class="header">
     Welcome to {{ title }}!
   </h1>
 
-  <div *ngFor="let problem of problems">
+  <div *ngFor="let problem of problems; let i = index">
     <div class="problem-card">
       <div class="title">{{ problem.title }}</div>
       <div class="description">{{ problem.description }}</div>
-      <div class="answer">The answer is {{ problem.getAnswer() }}</div>
+      <div class="hidden" *ngIf="!showAnswers && i !== 0" (click)="onHiddenTextClick()">Click here for the answer</div>
+      <div class="answer" *ngIf="showAnswers || i === 0">The answer is {{ problem.getAnswer() }}</div>
       <hr>
     </div>
   </div>
