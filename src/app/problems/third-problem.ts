@@ -1,4 +1,5 @@
 import { IProblem } from '../app.component.model';
+import { Helper } from '../utils/helper';
 
 export class ThirdProblem implements IProblem {
   public title = 'Problem 3';
@@ -7,7 +8,7 @@ export class ThirdProblem implements IProblem {
   getAnswer(): string {
     let result = 600851475143;
 
-    while (!this.isPrime(result)) {
+    while (!Helper.isPrime(result)) {
       result = this.getFraction(result);
     }
 
@@ -18,20 +19,11 @@ export class ThirdProblem implements IProblem {
     let start = 2;
     let result = 0;
     while (start < n && result === 0) {
-      if (this.isPrime(start) && n % start === 0) {
+      if (Helper.isPrime(start) && n % start === 0) {
         result = n / start;
       }
       start++;
     }
     return result;
-  }
-
-  private isPrime(s: number) : boolean {
-    for (let start = 2; start < s; start++) {
-      if (s % start === 0) {
-        return false;
-      }
-    }
-    return true;
   }
 }
