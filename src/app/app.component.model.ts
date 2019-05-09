@@ -5,6 +5,7 @@ import { FourthProblem } from './problems/fourth-problem';
 import { FifthProblem } from './problems/fifth-problem';
 import { SixthProblem } from './problems/sixth-problem';
 import { SeventhProblem } from './problems/seventh-problem';
+import { EighthProblem } from './problems/eighth-problem';
 
 export interface IProblem {
   title: string;
@@ -13,6 +14,7 @@ export interface IProblem {
 }
 
 export const PROBLEMS: IProblem[] = [
+  new EighthProblem(),
   new SeventhProblem(),
   new SixthProblem(),
   new FifthProblem(),
