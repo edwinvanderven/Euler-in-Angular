@@ -29,4 +29,42 @@ describe('Helper', () => {
       }); 
     });
   });
+
+  describe('sum', () => {
+    it('should return the sum for the provided arguments', () => {
+      expect(Helper.sum(1, 2, 3)).toEqual(6);
+      expect(Helper.sum(66, 55, 44, 33, 22, 11)).toEqual(231);
+      expect(Helper.sum(999, 999)).toEqual(1998);
+    });
+  });
+
+  describe('prod', () => {
+    it('should return the product for the provided arguments', () => {
+      expect(Helper.prod(1, 2, 3)).toEqual(6);
+      expect(Helper.prod(66, 55, 44, 33, 22, 11)).toEqual(1275523920);
+      expect(Helper.prod(999, 999)).toEqual(998001);
+    });
+  });
+
+  describe('isNaturalNumber', () => {
+    it('should return true for a natural number', () => {
+      [1, 95, 106, 8364].forEach((num: number) => expect(Helper.isNaturalNumber(num)).toBeTruthy());
+    });
+    it('should return false for a fraction or negative number', () => {
+      [0.1, 13.89, -89].forEach((num: number) => expect(Helper.isNaturalNumber(num)).toBeFalsy());
+    });
+  });
+
+  describe('isFraction', () => {
+    it('should return true for a fraction', () => {
+      expect(Helper.isFraction(10, 20)).toBeTruthy();
+      expect(Helper.isFraction(5, 6)).toBeTruthy();
+      expect(Helper.isFraction(7, 3)).toBeTruthy();
+    });
+    it('should return false for natural number', () => {
+      expect(Helper.isFraction(6, 3)).toBeFalsy();
+      expect(Helper.isFraction(9, 3)).toBeFalsy();
+      expect(Helper.isFraction(100, 10)).toBeFalsy();
+    });
+  });
 });

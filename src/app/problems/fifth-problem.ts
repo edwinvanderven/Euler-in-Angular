@@ -1,4 +1,5 @@
 import { IProblem } from '../app.component.model';
+import { Helper } from '../utils/helper';
 
 export class FifthProblem implements IProblem {
   public title = 'Problem 5';
@@ -7,21 +8,13 @@ export class FifthProblem implements IProblem {
 
   getAnswer(): string {
     let result: number = 10;
-    let keepLooping: boolean = true;
+    let i = 1;
     const length: number = 20;
 
-    while (keepLooping) {
-      for (let i = 1; i <= length; i++) {
-        if (result % i !== 0) {
-          // result has a remainder, keep looping
-          result++;
-          break;
-        }
-
-        if (i === length) {
-          keepLooping = false;
-        }
-      }
+    while (i <= length) {
+      const isFraction = Helper.isFraction(result, i);
+      result = isFraction ? result + 1 : result;
+      i = isFraction ? 1 : i + 1;
     }
 
     return result.toString();

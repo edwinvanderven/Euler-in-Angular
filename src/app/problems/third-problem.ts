@@ -8,9 +8,7 @@ export class ThirdProblem implements IProblem {
   getAnswer(): string {
     let result = 600851475143;
 
-    while (!Helper.isPrime(result)) {
-      result = this.getFraction(result);
-    }
+    while (!Helper.isPrime(result)) result = this.getFraction(result);
 
     return result.toString();
   }
@@ -19,9 +17,7 @@ export class ThirdProblem implements IProblem {
     let start = 2;
     let result = 0;
     while (start < n && result === 0) {
-      if (Helper.isPrime(start) && n % start === 0) {
-        result = n / start;
-      }
+      if (Helper.isPrime(start) && n % start === 0) result = n / start;
       start++;
     }
     return result;

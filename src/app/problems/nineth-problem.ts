@@ -1,5 +1,5 @@
 import { IProblem } from '../app.component.model';
-import { injectArgs } from '@angular/core/src/di/injector_compatibility';
+import { Helper } from '../utils/helper';
 
 export class NinethProblem implements IProblem {
   public title = 'Problem 9';
@@ -18,8 +18,8 @@ export class NinethProblem implements IProblem {
       let b = a + 1;
       while (b < length && result === 0) {
         const c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
-        const isAnswer = this.isNaturalNumber(c) && this.sum(a, b, c) === length;
-        result = isAnswer ? this.prod(a, b, c) : 0;
+        const isAnswer = Helper.isNaturalNumber(c) && Helper.sum(a, b, c) === length;
+        result = isAnswer ? Helper.prod(a, b, c) : 0;
         b++;
       }
       a++;
@@ -27,8 +27,4 @@ export class NinethProblem implements IProblem {
 
     return result.toString();
   }
-
-  private sum = (...args: number[]) => args.reduce((a, b) => a + b);
-  private prod = (...args: number[]) => args.reduce((a, b) => a * b);
-  private isNaturalNumber = (num: number) => num % 1 === 0;
 }

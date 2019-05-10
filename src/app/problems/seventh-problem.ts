@@ -10,9 +10,7 @@ export class SeventhProblem implements IProblem {
     let primesFound = 0;
     while (primesFound < 10001) {
       result++;
-      if (Helper.isPrime(result)) {
-        primesFound++;
-      }
+      primesFound = Helper.isPrime(result) ? primesFound + 1 : primesFound;
     }
     return result.toString();
   }

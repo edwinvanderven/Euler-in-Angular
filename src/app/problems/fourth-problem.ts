@@ -12,16 +12,13 @@ export class FourthProblem implements IProblem {
     for (let i = length; i > 100; i--) {
       for (let j = length; j > 100; j--) {
         let cal = i * j;
-        if (cal > result && this.isPalindrome('' + cal)) {
-          result = cal;
-        }
+        const isAnswer = cal > result && this.isPalindrome('' + cal);
+        result = isAnswer ? cal : result;
       }
     }
 
     return result.toString();
   }
 
-  private isPalindrome(s: string): boolean {
-    return s === s.split("").reverse().join("");
-  }
+  private isPalindrome = (s: string): boolean => s === s.split("").reverse().join("");
 }

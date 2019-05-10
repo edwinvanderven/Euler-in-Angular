@@ -9,12 +9,10 @@ export class FirstProblem implements IProblem {
     let result: number = 0;
     const length = 1000;
 
-    for (let i = 1; i < length; i++) {
-      if (i % 3 === 0 || i % 5 === 0) {
-        result += i;
-      }
-    }
+    for (let i = 1; i < length; i++) if (this.isMultipleOf(i, 3, 5)) result += i;
 
     return result.toString();
   }
+
+  private isMultipleOf = (num, ...args: number[]) => args.some((elm) => num % elm === 0);
 }
