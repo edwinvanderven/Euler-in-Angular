@@ -1,13 +1,13 @@
-import { FirstProblem } from './problems/first-problem';
-import { SecondProblem } from './problems/second-problem';
-import { ThirdProblem } from './problems/third-problem';
-import { FourthProblem } from './problems/fourth-problem';
-import { FifthProblem } from './problems/fifth-problem';
-import { SixthProblem } from './problems/sixth-problem';
-import { SeventhProblem } from './problems/seventh-problem';
-import { EighthProblem } from './problems/eighth-problem';
-import { NinethProblem } from './problems/nineth-problem';
-import { TenthProblem } from './problems/tenth-problem';
+import { FirstProblem } from './problems/one-to-ten/first-problem';
+import { SecondProblem } from './problems/one-to-ten/second-problem';
+import { ThirdProblem } from './problems/one-to-ten/third-problem';
+import { FourthProblem } from './problems/one-to-ten/fourth-problem';
+import { FifthProblem } from './problems/one-to-ten/fifth-problem';
+import { SixthProblem } from './problems/one-to-ten/sixth-problem';
+import { SeventhProblem } from './problems/one-to-ten/seventh-problem';
+import { EighthProblem } from './problems/one-to-ten/eighth-problem';
+import { NinethProblem } from './problems/one-to-ten/nineth-problem';
+import { TenthProblem } from './problems/one-to-ten/tenth-problem';
 
 export interface IProblem {
   title: string;

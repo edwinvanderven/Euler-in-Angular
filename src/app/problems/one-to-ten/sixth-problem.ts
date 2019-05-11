@@ -1,4 +1,4 @@
-import { IProblem } from '../app.component.model';
+import { IProblem } from '../../app.component.model';
 
 export class SixthProblem implements IProblem {
   public title = 'Problem 6';
