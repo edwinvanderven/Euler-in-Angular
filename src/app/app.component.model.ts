@@ -8,6 +8,7 @@ import { SeventhProblem } from './problems/one-to-ten/seventh-problem';
 import { EighthProblem } from './problems/one-to-ten/eighth-problem';
 import { NinethProblem } from './problems/one-to-ten/nineth-problem';
 import { TenthProblem } from './problems/one-to-ten/tenth-problem';
+import { EleventhProblem } from './problems/eleven-to-twenty/eleventh-problem';
 
 export interface IProblem {
   title: string;
@@ -16,6 +17,7 @@ export interface IProblem {
 }
 
 export const PROBLEMS: IProblem[] = [
+  new EleventhProblem(),
   new TenthProblem(),
   new NinethProblem(),
   new EighthProblem(),
