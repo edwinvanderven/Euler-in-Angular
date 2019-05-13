@@ -30,6 +30,19 @@ describe('Helper', () => {
     });
   });
 
+  describe('numberOfDivisors', () => {
+    it('should return the correct number of divisors', () => {
+      expect(Helper.numberOfDivisors(1)).toEqual(1);
+      expect(Helper.numberOfDivisors(3)).toEqual(2);
+      expect(Helper.numberOfDivisors(6)).toEqual(4);
+      expect(Helper.numberOfDivisors(10)).toEqual(4);
+      expect(Helper.numberOfDivisors(15)).toEqual(4);
+      expect(Helper.numberOfDivisors(21)).toEqual(4);
+      expect(Helper.numberOfDivisors(28)).toEqual(6);
+      expect(Helper.numberOfDivisors(76576500)).toEqual(576);
+    });
+  });
+
   describe('sum', () => {
     it('should return the sum for the provided arguments', () => {
       expect(Helper.sum(1, 2, 3)).toEqual(6);

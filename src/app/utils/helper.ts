@@ -9,6 +9,26 @@ export class Helper {
     return true;
   }
 
+  static numberOfDivisors(x: number) : number {
+    let numDivisors = 1;
+    let factor = 2;
+    while(factor * factor <= x) {
+      if (x % factor === 0) {
+        let exponent = 0;
+        while (x % factor === 0) {
+          x /= factor;
+          exponent++;
+        }
+        numDivisors *= exponent + 1;
+      }
+      factor = factor === 2 ? 3 : factor + 2;
+    }
+
+    if (x > 1) numDivisors *= 2;
+
+    return numDivisors;
+  }
+
   static sum = (...args: number[]) => args.reduce((a, b) => a + b);
   static prod = (...args: number[]) => args.reduce((a, b) => a * b);
   static isNaturalNumber = (num: number) => num > -1 && num % 1 === 0; // 0 is considered a natural number
