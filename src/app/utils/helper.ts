@@ -29,7 +29,7 @@ export class Helper {
     return numDivisors;
   }
 
-  static sum = (...args: number[]) => args.reduce((a, b) => a + b);
+  static sum = (args: number[]) => args.reduce((a, b) => a + b);
   static prod = (...args: number[]) => args.reduce((a, b) => a * b);
   static isNaturalNumber = (num: number) => num > -1 && num % 1 === 0; // 0 is considered a natural number
   static isFraction = (num: number, divider: number) => num % divider !== 0;

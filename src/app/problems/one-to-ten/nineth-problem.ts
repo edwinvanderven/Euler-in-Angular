@@ -18,7 +18,7 @@ export class NinethProblem implements IProblem {
       let b = a + 1;
       while (b < length && result === 0) {
         const c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
-        const isAnswer = Helper.isNaturalNumber(c) && Helper.sum(a, b, c) === length;
+        const isAnswer = Helper.isNaturalNumber(c) && Helper.sum([a, b, c]) === length;
         result = isAnswer ? Helper.prod(a, b, c) : 0;
         b++;
       }

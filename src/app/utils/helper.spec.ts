@@ -45,9 +45,9 @@ describe('Helper', () => {
 
   describe('sum', () => {
     it('should return the sum for the provided arguments', () => {
-      expect(Helper.sum(1, 2, 3)).toEqual(6);
-      expect(Helper.sum(66, 55, 44, 33, 22, 11)).toEqual(231);
-      expect(Helper.sum(999, 999)).toEqual(1998);
+      expect(Helper.sum([1, 2, 3])).toEqual(6);
+      expect(Helper.sum([66, 55, 44, 33, 22, 11])).toEqual(231);
+      expect(Helper.sum([999, 999])).toEqual(1998);
     });
   });
 
