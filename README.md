@@ -1,29 +1,43 @@
-# EulerInAngular
+# Euler in angular
 
-An Angular webpage with the questions and answers for the Project Euler problems.
+An Angular webpage with the questions and answers for the [Project Euler](https://projecteuler.net/) problems.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.3.
+Every problem is divided into its own class and spec file to validate the solution keeps working.
 
-## Development server
+## Development
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run npm install to install all the required packages.
 
-## Code scaffolding
+```sh
+npm install
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run npm start to start the development environment and navigate to <http://localhost:4200/>
+
+```sh
+npm run start
+```
+
+> The app will automatically reload if you change any of the source files.
 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+## Test
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Running unit tests
 
-## Running end-to-end tests
+Run npm test to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```sh
+npm run test
+```
 
-## Further help
+### Running end-to-end tests
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Run npm e2e to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+```sh
+npm run e2e
+```
