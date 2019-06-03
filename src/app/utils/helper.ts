@@ -37,18 +37,14 @@ export class Helper {
 
   static factorial (x: number) : number {
     let product = 1;
-    for (let i = 2; i <= x; i++) {
-      product = product * i;
-    }
+    for (let i = 2; i <= x; i++) product = product * i;
     return product;
   }
 
-  static binomial (x: number, y: number) {
+  static binomial (n: number, k: number) : number {
     let product = 1;
-    for (let i = 0; i < y; i++) {
-      product = product * (x - i); 
-    }
+    for (let i = 0; i < k; i++) product = product * (n - i); 
     // quotients could cause rounding errors
-    return Math.round(product / this.factorial(y));
+    return Math.round(product / this.factorial(k));
   }
 }

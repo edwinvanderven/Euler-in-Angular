@@ -80,4 +80,23 @@ describe('Helper', () => {
       expect(Helper.isFraction(100, 10)).toBeFalsy();
     });
   });
+
+  describe('factorial', () => {
+    it('should return the correct factorial', () => {
+      expect(Helper.factorial(5)).toEqual(120);
+      expect(Helper.factorial(10)).toEqual(3628800);
+      expect(Helper.factorial(15)).toEqual(1307674368000);
+    });
+  });
+
+  // See https://en.wikipedia.org/wiki/Binomial_coefficient
+  describe('binomial', () => {
+    it('should return the correct binomial values', () => {
+      expect(Helper.binomial(2, 2)).toEqual(1);
+      expect(Helper.binomial(4, 2)).toEqual(6);
+      expect(Helper.binomial(4, 4)).toEqual(1);
+      expect(Helper.binomial(40, 20)).toEqual(137846528820);
+      expect(Helper.binomial(40, 40)).toEqual(1);
+    });
+  });
 });
