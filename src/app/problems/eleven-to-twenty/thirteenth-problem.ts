@@ -5,15 +5,6 @@ export class ThirteenthProblem implements IProblem {
   public title = 'Problem 13';
   public description = 'Work out the first ten digits of the sum of the following one-hundred 50-digit numbers.';
 
-  getAnswer(): string {
-    let result: string;
-
-    result = '' + Helper.sum(this.numbers);
-    result = result.replace('.', '');
-    result = result.substring(0, 10);
-    return result;
-  }
-
   private numbers: number[] = [
     37107287533902102798797998220837590246510135740250,
     46376937677490009712648124896970078050417018260538,
@@ -116,4 +107,13 @@ export class ThirteenthProblem implements IProblem {
     20849603980134001723930671666823555245252804609722,
     53503534226472524250874054075591789781264330331690
   ];
+
+  getAnswer(): string {
+    let result: string;
+
+    result = '' + Helper.sum(this.numbers);
+    result = result.replace('.', '');
+    result = result.substring(0, 10);
+    return result;
+  }
 }

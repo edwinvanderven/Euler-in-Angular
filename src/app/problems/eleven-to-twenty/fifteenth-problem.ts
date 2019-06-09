@@ -7,7 +7,7 @@ export class FifteenthProblem implements IProblem {
                         '\nHow many such routes are there through a 20×20 grid?';
 
   getAnswer(): string {
-    let result: number = Helper.binomial(40, 20);
+    const result: number = Helper.binomial(40, 20);
     return result.toString();
   }
 }

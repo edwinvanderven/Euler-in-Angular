@@ -6,12 +6,12 @@ export class FourthProblem implements IProblem {
                         '\nFind the largest palindrome made from the product of two 3-digit numbers.';
 
   getAnswer(): string {
-    let result: number = 0;
+    let result = 0;
     const length = 999;
 
     for (let i = length; i > 100; i--) {
       for (let j = length; j > 100; j--) {
-        let cal = i * j;
+        const cal = i * j;
         const isAnswer = cal > result && this.isPalindrome('' + cal);
         result = isAnswer ? cal : result;
       }
@@ -20,5 +20,5 @@ export class FourthProblem implements IProblem {
     return result.toString();
   }
 
-  private isPalindrome = (s: string): boolean => s === s.split("").reverse().join("");
+  private isPalindrome = (s: string): boolean => s === s.split('').reverse().join('');
 }

@@ -12,8 +12,8 @@ export class FourteenthProblem implements IProblem {
                         '\nNOTE: Once the chain starts the terms are allowed to go above one million.';
 
   getAnswer(): string {
-    let result: number = 1;
-    let highestChain: number = 2;
+    let result = 1;
+    let highestChain = 2;
     const length = 1000000;
     for (let i = 2; i < length; i++) {
       const n = this.getCollatzConjectureLength(i);
@@ -26,7 +26,7 @@ export class FourteenthProblem implements IProblem {
     return result.toString();
   }
 
-  private getCollatzConjectureLength(x: number) : number {
+  private getCollatzConjectureLength(x: number): number {
     let result = 1;
     while (x > 1) {
       x = this.isEven(x) ? this.doEven(x) : this.doOdd(x);
@@ -35,7 +35,7 @@ export class FourteenthProblem implements IProblem {
     return result;
   }
 
-  private isEven = (x: number) : boolean => x % 2 === 0;
-  private doEven = (x: number) : number => x / 2;
-  private doOdd = (x: number) : number => x * 3 + 1;
+  private isEven = (x: number): boolean => x % 2 === 0;
+  private doEven = (x: number): number => x / 2;
+  private doOdd = (x: number): number => x * 3 + 1;
 }

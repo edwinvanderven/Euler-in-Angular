@@ -6,10 +6,10 @@ export class FirstProblem implements IProblem {
                         '\nFind the sum of all the multiples of 3 or 5 below 1000.';
 
   getAnswer(): string {
-    let result: number = 0;
+    let result = 0;
     const length = 1000;
 
-    for (let i = 1; i < length; i++) if (this.isMultipleOf(i, 3, 5)) result += i;
+    for (let i = 1; i < length; i++) { if (this.isMultipleOf(i, 3, 5)) { result += i; } }
 
     return result.toString();
   }

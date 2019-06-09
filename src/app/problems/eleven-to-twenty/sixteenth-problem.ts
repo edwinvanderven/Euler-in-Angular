@@ -8,8 +8,8 @@ export class SixteenthProblem implements IProblem {
                         '\nWhat is the sum of the digits of the number 2^1000?';
 
   getAnswer(): string {
-    let big: bigInt.BaseArray = bigInt(Math.pow(2, 1000)).toArray(10);
-    let result: number = Helper.sum(big.value);
+    const big: bigInt.BaseArray = bigInt(Math.pow(2, 1000)).toArray(10);
+    const result: number = Helper.sum(big.value);
     return result.toString();
   }
 }
