@@ -99,4 +99,17 @@ describe('Helper', () => {
       expect(Helper.binomial(40, 40)).toEqual(1);
     });
   });
+
+  describe('numberToWord', () => {
+    it('should return the correct word', () => {
+      expect(Helper.numberToWord(0)).toEqual('zero');
+      expect(Helper.numberToWord(13)).toEqual('thirteen');
+      expect(Helper.numberToWord(115)).toEqual('one hundred and fifteen');
+      expect(Helper.numberToWord(342)).toEqual('three hundred and forty two');
+      expect(Helper.numberToWord(9617)).toEqual('nine thousand six hundred and seventeen');
+    });
+    it('should return an error when an negative number is provided', () => {
+      expect(() => { Helper.numberToWord(-1) }).toThrow(new Error('Negative numbers are not supported.'));
+    });
+  });
 });

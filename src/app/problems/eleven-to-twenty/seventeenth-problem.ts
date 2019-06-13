@@ -1,4 +1,5 @@
 import { IProblem } from '../../app.component.model';
+import { Helper } from 'src/app/utils/helper';
 
 export class SeventeenthProblem implements IProblem {
   public title = 'Problem 17';
@@ -11,47 +12,9 @@ export class SeventeenthProblem implements IProblem {
     let result = 0;
     const length = 1000;
     for (let i = 1; i <= length; i++) {
-      let word = this.humanize(i).replace(/\s+/g, '');
+      const word = Helper.numberToWord(i).replace(/\s+/g, '');
       result += word.length;
     }
     return result.toString();
-  }
-
-  humanize(num){
-    var ones = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine',
-                'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen',
-                'seventeen', 'eighteen', 'nineteen'];
-    var tens = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty',
-                'ninety'];
-  
-    var numString = num.toString();
-  
-    if (num < 0) throw new Error('Negative numbers are not supported.');
-  
-    if (num === 0) return 'zero';
-  
-    //the case of 1 - 20
-    if (num < 20) {
-      return ones[num];
-    }
-  
-    if (numString.length === 2) {
-      return tens[numString[0]] + ' ' + ones[numString[1]];
-    }
-  
-    //100 and more
-    if (numString.length == 3) {
-      if (numString[1] === '0' && numString[2] === '0')
-        return ones[numString[0]] + ' hundred';
-      else
-        return ones[numString[0]] + ' hundred and ' + this.humanize(+(numString[1] + numString[2]));
-    }
-  
-    if (numString.length === 4) {
-      var end = +(numString[1] + numString[2] + numString[3]);
-      if (end === 0) return ones[numString[0]] + ' thousand';
-      if (end < 100) return ones[numString[0]] + ' thousand and ' + this.humanize(end);
-      return ones[numString[0]] + ' thousand ' + this.humanize(end);
-    }
   }
 }

@@ -47,4 +47,36 @@ export class Helper {
     // quotients could cause rounding errors
     return Math.round(product / this.factorial(k));
   }
+
+  private static ones = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
+  private static tens = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+
+  static numberToWord(num: number) : string {
+    if (num < 0) throw new Error('Negative numbers are not supported.');
+    if (num === 0) return 'zero';
+
+    // 1 to 20
+    if (num < 20) return this.ones[num];
+
+    // 20 to 99
+    let numString = num.toString();
+    if (numString.length === 2) return this.tens[numString[0]] + ' ' + this.ones[numString[1]];
+
+    // 100 and more
+    if (numString.length == 3) return this.numberInHunderds(numString);
+    // 1000 and more
+    if (numString.length === 4) return this.numberInThousands(numString);
+  }
+
+  private static numberInHunderds(numString: string) : string {
+    if (numString[1] === '0' && numString[2] === '0') return this.ones[numString[0]] + ' hundred';
+    else return this.ones[numString[0]] + ' hundred and ' + this.numberToWord(+(numString[1] + numString[2]));
+  }
+
+  private static numberInThousands(numString: string) : string {
+    const end = +(numString[1] + numString[2] + numString[3]);
+    if (end === 0) return this.ones[numString[0]] + ' thousand';
+    if (end < 100) return this.ones[numString[0]] + ' thousand and ' + this.numberToWord(end);
+    return this.ones[numString[0]] + ' thousand ' + this.numberToWord(end);
+  }
 }
