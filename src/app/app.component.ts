@@ -10,9 +10,13 @@ export class AppComponent {
   public title = 'euler-in-angular';
   public problems: IProblem[] = PROBLEMS;
 
-  public showAnswers: boolean = false;
+  private showAnswersLookup = {};
 
-  public onHiddenTextClick() {
-    this.showAnswers = true;
+  public onHiddenTextClick(i: number) {
+    this.showAnswersLookup[i] = true;
+  }
+
+  public shouldShowAnswer(i: number) {
+    return this.showAnswersLookup[i] === true;
   }
 }

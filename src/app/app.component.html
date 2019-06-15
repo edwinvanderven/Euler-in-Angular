@@ -7,8 +7,8 @@
     <div class="problem-card">
       <div class="title">{{ problem.title }}</div>
       <div class="description">{{ problem.description }}</div>
-      <div class="hidden" *ngIf="!showAnswers && i !== 0" (click)="onHiddenTextClick()">Click here for the answer</div>
-      <div class="answer" *ngIf="showAnswers || i === 0">The answer is {{ problem.getAnswer() }}</div>
+      <div class="hidden" *ngIf="!shouldShowAnswer(i) && i !== 0" (click)="onHiddenTextClick(i)">Click here for the answer</div>
+      <div class="answer" *ngIf="shouldShowAnswer(i) || i === 0">The answer is {{ problem.getAnswer() }}</div>
       <hr>
     </div>
   </div>
