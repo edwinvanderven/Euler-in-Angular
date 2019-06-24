@@ -33,7 +33,6 @@ export class EighteenthProblem implements IProblem {
       }
     }
     result = this.triangle[0][0];
-    console.log(this.triangle);
     return result.toString();
   }
 }
