@@ -1,4 +1,5 @@
 import { IProblem } from '../../app.component.model';
+import { Helper } from 'src/app/utils/helper';
 
 export class TwentyFirstProblem implements IProblem {
   public title = 'Problem 21';
@@ -10,23 +11,9 @@ export class TwentyFirstProblem implements IProblem {
   getAnswer(): string {
     let result = 0;
     for (let i = 1; i < 10000; i++) {
-      if (this.isAmicable(i))
+      if (Helper.isAmicable(i))
         result += i;
     }
     return result.toString();
   }
-
-  private isAmicable(x: number) {
-    let m = this.divisorSum(x);
-		return m != x && this.divisorSum(m) == x;
-  }
-
-  private divisorSum(n: number) {
-		let result = 0;
-		for (let i = 1; i < n; i++) {
-			if (n % i == 0)
-				result += i;
-		}
-		return result;
-	}
 }

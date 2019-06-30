@@ -112,4 +112,17 @@ describe('Helper', () => {
       expect(() => { Helper.numberToWord(-1) }).toThrow(new Error('Negative numbers are not supported.'));
     });
   });
+
+  describe('isAmicable', () => {
+    it('should return true for the provided amicable numbers', () => {
+      [220, 284, 1184, 1210, 2620, 2924, 5020, 5564, 6232, 6368, 10744, 10856, 12285, 14595, 17296, 18416, 63020, 76084].forEach((x: number) => {
+        expect(Helper.isAmicable(x)).toBeTruthy();
+      });
+    });
+    it('should return false for the none provided amicable numbers', () => {
+      [221, 287, 1124, 1310, 2520, 2914, 5120, 5664, 6132, 6268, 10644, 10956, 12385, 14695, 17396, 18516, 63120, 76184].forEach((x: number) => {
+        expect(Helper.isAmicable(x)).toBeFalsy();
+      });
+    });
+  });
 });

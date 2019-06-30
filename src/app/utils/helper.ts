@@ -79,4 +79,18 @@ export class Helper {
     if (end < 100) return this.ones[numString[0]] + ' thousand and ' + this.numberToWord(end);
     return this.ones[numString[0]] + ' thousand ' + this.numberToWord(end);
   }
+
+
+  static isAmicable(x: number) : boolean {
+    const m = this.divisorSum(x);
+    return m != x && this.divisorSum(m) === x;
+  }
+
+  private static divisorSum(n: number) : number {
+    let result = 0;
+    for (let i = 1; i < n; i++) {
+      if (n % i == 0) result += i;
+    }
+    return result;
+  }
 }
