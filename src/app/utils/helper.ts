@@ -86,6 +86,11 @@ export class Helper {
     return m != x && this.divisorSum(m) === x;
   }
 
+  static isAbundant(x: number) : boolean {
+    const sum = this.divisorSum(x);
+    return sum > x;
+  }
+
   private static divisorSum(n: number) : number {
     let result = 0;
     for (let i = 1; i < n; i++) {

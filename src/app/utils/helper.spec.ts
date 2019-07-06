@@ -125,4 +125,17 @@ describe('Helper', () => {
       });
     });
   });
+
+  describe('isAbundant', () => {
+    it('should return true for abundant numbers', () => {
+      [12, 18, 20, 24, 30, 36, 40, 42, 48, 54, 56, 60, 66, 70, 72, 78, 80, 84, 88, 90, 96, 100, 102, 104, 108, 112, 114, 120].forEach((x: number) => {
+        expect(Helper.isAbundant(x)).toBeTruthy();
+      });
+    });
+    it('should return false for none abundant numbers', () => {
+      [13, 19, 22, 27, 31, 35, 43, 47, 49, 53, 57, 61, 67].forEach((x: number) => {
+        expect(Helper.isAbundant(x)).toBeFalsy();
+      });
+    });
+  });
 });
