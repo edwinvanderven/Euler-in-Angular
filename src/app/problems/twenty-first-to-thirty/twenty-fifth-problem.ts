@@ -1,5 +1,6 @@
 import { IProblem } from '../../app.component.model';
 import * as bigInt from 'big-integer';
+import { Helper } from 'src/app/utils/helper';
 
 export class TwentyFifthProblem implements IProblem {
   public title = 'Problem 25';
@@ -24,21 +25,12 @@ export class TwentyFifthProblem implements IProblem {
   getAnswer(): string {
     let result = '';
     let i = 1;
-    
     while (result.length < 1000) {
       i++;
-      const big: bigInt.BaseArray = bigInt(this.fibonacci(i)).toArray(10);
+      const big: bigInt.BaseArray = bigInt(Helper.fibonacci(i)).toArray(10);
       result = big.value.join().replace(/,/g, '');
     }
 
     return i.toString();
-  }
-
-  private fibonacci(n: number) : bigInt.BigInteger {
-    let arr = [bigInt(0), bigInt(1)];
-    for (let i = 2; i < n + 1; i++) {
-      arr.push(bigInt(arr[i - 2]).add(bigInt(arr[i - 1])));
-    }
-    return arr[n];
   }
 }

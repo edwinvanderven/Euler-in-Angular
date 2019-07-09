@@ -1,4 +1,5 @@
 import { Helper } from './helper';
+import * as bigInt from 'big-integer';
 
 describe('Helper', () => {
   it('should create an instance', () => {
@@ -136,6 +137,15 @@ describe('Helper', () => {
       [13, 19, 22, 27, 31, 35, 43, 47, 49, 53, 57, 61, 67].forEach((x: number) => {
         expect(Helper.isAbundant(x)).toBeFalsy();
       });
+    });
+  });
+
+  describe('fibonacci', () => {
+    it('should return the correct fibonacci number', () => {
+      expect(Helper.fibonacci(4).toJSNumber()).toEqual(3);
+      expect(Helper.fibonacci(1).toJSNumber()).toEqual(1);
+      expect(Helper.fibonacci(12).toJSNumber()).toEqual(144);
+      expect(Helper.fibonacci(100).toJSNumber()).toEqual(354224848179261900000);
     });
   });
 });

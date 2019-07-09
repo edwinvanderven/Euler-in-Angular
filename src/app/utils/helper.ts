@@ -1,3 +1,5 @@
+import * as bigInt from 'big-integer';
+
 export class Helper {
 
   static isPrime(x: number): boolean {
@@ -97,5 +99,13 @@ export class Helper {
       if (n % i == 0) result += i;
     }
     return result;
+  }
+
+  static fibonacci(n: number) : bigInt.BigInteger {
+    let arr = [bigInt(0), bigInt(1)];
+    for (let i = 2; i < n + 1; i++) {
+      arr.push(bigInt(arr[i - 2]).add(bigInt(arr[i - 1])));
+    }
+    return arr[n];
   }
 }
