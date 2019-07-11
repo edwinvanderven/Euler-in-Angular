@@ -25,9 +25,11 @@ export class TwentyFifthProblem implements IProblem {
   getAnswer(): string {
     let result = '';
     let i = 1;
+    let arr = [bigInt(0), bigInt(1)];
     while (result.length < 1000) {
       i++;
-      const big: bigInt.BaseArray = bigInt(Helper.fibonacci(i)).toArray(10);
+      Helper.fibonacci_changeme(i, arr);
+      const big: bigInt.BaseArray = arr[i].toArray(10);
       result = big.value.join().replace(/,/g, '');
     }
 

@@ -108,4 +108,11 @@ export class Helper {
     }
     return arr[n];
   }
+
+  static fibonacci_changeme(n: number, col: bigInt.BigInteger[]) : bigInt.BigInteger[] {
+    for (let i = col.length; i <= n; i++) {
+      col.push(bigInt(col[i - 2]).add(bigInt(col[i - 1])));
+    }
+    return col;
+  }
 }
