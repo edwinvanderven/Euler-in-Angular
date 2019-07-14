@@ -24,15 +24,16 @@ export class TwentyFifthProblem implements IProblem {
 
   getAnswer(): string {
     let result = '';
-    let i = 1;
-    let arr = [bigInt(0), bigInt(1)];
+    let arr = [bigInt(1), bigInt(1)];
+    let i = arr.length;
     while (result.length < 1000) {
+      arr = Helper.fibonacciSeries(i, arr);
+      result = this.bigNumberToString(arr[i].toArray(10));
       i++;
-      Helper.fibonacci_changeme(i, arr);
-      const big: bigInt.BaseArray = arr[i].toArray(10);
-      result = big.value.join().replace(/,/g, '');
     }
 
     return i.toString();
   }
+
+  private bigNumberToString = (big: bigInt.BaseArray) => big.value.join().replace(/,/g, '');
 }

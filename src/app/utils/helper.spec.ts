@@ -110,7 +110,7 @@ describe('Helper', () => {
       expect(Helper.numberToWord(9617)).toEqual('nine thousand six hundred and seventeen');
     });
     it('should return an error when an negative number is provided', () => {
-      expect(() => { Helper.numberToWord(-1) }).toThrow(new Error('Negative numbers are not supported.'));
+      expect(() => { Helper.numberToWord(-1); }).toThrow(new Error('Negative numbers are not supported.'));
     });
   });
 
@@ -146,6 +146,31 @@ describe('Helper', () => {
       expect(Helper.fibonacci(1).toJSNumber()).toEqual(1);
       expect(Helper.fibonacci(12).toJSNumber()).toEqual(144);
       expect(Helper.fibonacci(100).toJSNumber()).toEqual(354224848179261900000);
+    });
+  });
+
+  describe('fibonacciSeries', () => {
+    let arr;
+    beforeEach(() => {
+      arr = [bigInt(1), bigInt(1)];
+    });
+
+    it('1) should return the correct fibonacci series', () => {
+      const index = 3;
+      const result = Helper.fibonacciSeries(index, arr)[index - 1].toJSNumber();
+      expect(result).toEqual(2);
+    });
+
+    it('2) should return the correct fibonacci series', () => {
+      const index = 12;
+      const result = Helper.fibonacciSeries(index, arr)[index - 1].toJSNumber();
+      expect(result).toEqual(144);
+    });
+
+    it('3) should return the correct fibonacci series', () => {
+      const index = 30;
+      const result = Helper.fibonacciSeries(index, arr)[index - 1].toJSNumber();
+      expect(result).toEqual(832040);
     });
   });
 });

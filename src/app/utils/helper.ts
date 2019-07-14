@@ -1,6 +1,10 @@
 import * as bigInt from 'big-integer';
 
+
 export class Helper {
+
+  private static ones = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
+  private static tens = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
 
   static isPrime(x: number): boolean {
     if (x === 0 || x === 1) { return false; }
@@ -50,10 +54,7 @@ export class Helper {
     return Math.round(product / this.factorial(k));
   }
 
-  private static ones = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
-  private static tens = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
-
-  static numberToWord(num: number) : string {
+  static numberToWord(num: number): string {
     if (num < 0) throw new Error('Negative numbers are not supported.');
     if (num === 0) return 'zero';
 
@@ -75,7 +76,7 @@ export class Helper {
     else return this.ones[numString[0]] + ' hundred and ' + this.numberToWord(+(numString[1] + numString[2]));
   }
 
-  private static numberInThousands(numString: string) : string {
+  private static numberInThousands(numString: string): string {
     const end = +(numString[1] + numString[2] + numString[3]);
     if (end === 0) return this.ones[numString[0]] + ' thousand';
     if (end < 100) return this.ones[numString[0]] + ' thousand and ' + this.numberToWord(end);
@@ -83,33 +84,33 @@ export class Helper {
   }
 
 
-  static isAmicable(x: number) : boolean {
-    const m = this.divisorSum(x);
-    return m != x && this.divisorSum(m) === x;
+  static isAmicable(x: number): boolean {
+    const sum = this.divisorSum(x);
+    return sum !== x && this.divisorSum(sum) === x;
   }
 
-  static isAbundant(x: number) : boolean {
+  static isAbundant(x: number): boolean {
     const sum = this.divisorSum(x);
     return sum > x;
   }
 
-  private static divisorSum(n: number) : number {
+  private static divisorSum(n: number): number {
     let result = 0;
     for (let i = 1; i < n; i++) {
-      if (n % i == 0) result += i;
+      if (n % i === 0) { result += i; }
     }
     return result;
   }
 
-  static fibonacci(n: number) : bigInt.BigInteger {
-    let arr = [bigInt(0), bigInt(1)];
+  static fibonacci(n: number): bigInt.BigInteger {
+    const arr = [bigInt(0), bigInt(1)];
     for (let i = 2; i < n + 1; i++) {
       arr.push(bigInt(arr[i - 2]).add(bigInt(arr[i - 1])));
     }
     return arr[n];
   }
 
-  static fibonacci_changeme(n: number, col: bigInt.BigInteger[]) : bigInt.BigInteger[] {
+  static fibonacciSeries(n: number, col: bigInt.BigInteger[]): bigInt.BigInteger[] {
     for (let i = col.length; i <= n; i++) {
       col.push(bigInt(col[i - 2]).add(bigInt(col[i - 1])));
     }
