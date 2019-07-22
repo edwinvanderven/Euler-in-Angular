@@ -24,11 +24,11 @@ export class NineteenthProblem implements IProblem {
     return result.toString();
   }
 
-  private isDayOfWeekSunday(year: number, month: number, day: number) : boolean {
+  private isDayOfWeekSunday(year: number, month: number, day: number): boolean {
     // 'borrowed' from https://en.wikipedia.org/wiki/Zeller%27s_congruence
     let m = (month - 3 + 4800) % 4800;
-    let y = (year + m / 12) % 400;
-    let result = (y + y/4 - y/100 + (13 * (m %= 12) + 2) / 5 + day + 2) % 7;
+    const y = (year + m / 12) % 400;
+    const result = (y + y / 4 - y / 100 + (13 * (m %= 12) + 2) / 5 + day + 2) % 7;
     // make sure to floor the result in case of fractions
     return Math.floor(result) === 0;
   }

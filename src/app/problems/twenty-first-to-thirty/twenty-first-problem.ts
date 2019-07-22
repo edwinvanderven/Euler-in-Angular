@@ -11,8 +11,9 @@ export class TwentyFirstProblem implements IProblem {
   getAnswer(): string {
     let result = 0;
     for (let i = 1; i < 10000; i++) {
-      if (Helper.isAmicable(i))
+      if (Helper.isAmicable(i)) {
         result += i;
+      }
     }
     return result.toString();
   }

@@ -62,16 +62,16 @@ export class Helper {
     if (num < 20) return this.ones[num];
 
     // 20 to 99
-    let numString = num.toString();
+    const numString = num.toString();
     if (numString.length === 2) return this.tens[numString[0]] + ' ' + this.ones[numString[1]];
 
     // 100 and more
-    if (numString.length == 3) return this.numberInHunderds(numString);
+    if (numString.length === 3) return this.numberInHunderds(numString);
     // 1000 and more
     if (numString.length === 4) return this.numberInThousands(numString);
   }
 
-  private static numberInHunderds(numString: string) : string {
+  private static numberInHunderds(numString: string): string {
     if (numString[1] === '0' && numString[2] === '0') return this.ones[numString[0]] + ' hundred';
     else return this.ones[numString[0]] + ' hundred and ' + this.numberToWord(+(numString[1] + numString[2]));
   }
