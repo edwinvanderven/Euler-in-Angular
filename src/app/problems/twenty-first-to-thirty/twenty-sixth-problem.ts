@@ -8,30 +8,29 @@ export class TwentySixthProblem implements IProblem {
                        '\nFind the value of d < 1000 for which 1/d contains the longest recurring cycle in its decimal fraction part..';
 
   getAnswer(): string {
-    // TODO move the calculate part to a helper function and add unit tests
-    const length = 1000;
-    let result = length;
+    let result = 1000;
     let longestLength = 0;
     for (result; result > 1; result--) {
-      const foundRemainders = [];
-      foundRemainders.length = result;
-
-      let value = 1;
-      let position = 0;
-
-      while (foundRemainders[value] === undefined && value !== 0) {
-        foundRemainders[value] = position;
-        value *= 10;
-        value %= result;
-        position++;
-      }
-
-      const val = position - foundRemainders[value];
-      longestLength = val > longestLength ? val : longestLength;
-
+      longestLength = this.getCycleLength(result);
       if (longestLength >= result - 1) { break; }
     }
 
     return result.toString();
+  }
+
+  private getCycleLength(remainderCount: number) {
+    const foundRemainders = [];
+    foundRemainders.length = remainderCount;
+    let value = 1;
+    let position = 0;
+
+    while (foundRemainders[value] === undefined && value !== 0) {
+      foundRemainders[value] = position;
+      value *= 10;
+      value %= remainderCount;
+      position++;
+    }
+
+    return position - foundRemainders[value];
   }
 }
