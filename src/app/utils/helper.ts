@@ -15,6 +15,14 @@ export class Helper {
     return true;
   }
 
+  static primeList(start: number, end: number): number[] {
+    let primes: number[] = [];
+    for (let i = start; i <= end; i++) {
+      if (this.isPrime(i)) primes.push(i);
+    }
+    return primes;
+  }
+
   static numberOfDivisors(x: number): number {
     let numDivisors = 1;
     let factor = 2;
@@ -108,12 +116,5 @@ export class Helper {
       arr.push(bigInt(arr[i - 2]).add(bigInt(arr[i - 1])));
     }
     return arr[n];
-  }
-
-  static fibonacciSeries(n: number, col: bigInt.BigInteger[]): bigInt.BigInteger[] {
-    for (let i = col.length; i <= n; i++) {
-      col.push(bigInt(col[i - 2]).add(bigInt(col[i - 1])));
-    }
-    return col;
   }
 }

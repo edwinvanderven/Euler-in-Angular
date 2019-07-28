@@ -31,6 +31,16 @@ describe('Helper', () => {
     });
   });
 
+  describe('primeList', () => {
+    it('should return the correct array of prime numbers', () => {
+      expect(Helper.primeList(1, 20)).toEqual([2, 3, 5, 7, 11, 13, 17, 19]);
+      expect(Helper.primeList(1, 30)).toEqual([2, 3, 5, 7, 11, 13, 17, 19, 23, 29]);
+      expect(Helper.primeList(1, 40)).toEqual([2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37]);
+      expect(Helper.primeList(1, 50)).toEqual([2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]);
+      expect(Helper.primeList(1, 60)).toEqual([2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59]);
+    });
+  });
+
   describe('numberOfDivisors', () => {
     it('should return the correct number of divisors', () => {
       expect(Helper.numberOfDivisors(1)).toEqual(1);
@@ -146,31 +156,6 @@ describe('Helper', () => {
       expect(Helper.fibonacci(1).toJSNumber()).toEqual(1);
       expect(Helper.fibonacci(12).toJSNumber()).toEqual(144);
       expect(Helper.fibonacci(100).toJSNumber()).toEqual(354224848179261900000);
-    });
-  });
-
-  describe('fibonacciSeries', () => {
-    let arr;
-    beforeEach(() => {
-      arr = [bigInt(1), bigInt(1)];
-    });
-
-    it('1) should return the correct fibonacci series', () => {
-      const index = 3;
-      const result = Helper.fibonacciSeries(index, arr)[index - 1].toJSNumber();
-      expect(result).toEqual(2);
-    });
-
-    it('2) should return the correct fibonacci series', () => {
-      const index = 12;
-      const result = Helper.fibonacciSeries(index, arr)[index - 1].toJSNumber();
-      expect(result).toEqual(144);
-    });
-
-    it('3) should return the correct fibonacci series', () => {
-      const index = 30;
-      const result = Helper.fibonacciSeries(index, arr)[index - 1].toJSNumber();
-      expect(result).toEqual(832040);
     });
   });
 });

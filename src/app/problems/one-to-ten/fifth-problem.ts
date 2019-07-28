@@ -7,15 +7,18 @@ export class FifthProblem implements IProblem {
                         '\nWhat is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?';
 
   getAnswer(): string {
-    let result = 10;
-    let i = 1;
+    let result = 1;
     const length = 20;
+    const primes = Helper.primeList(1, 20);
+    const lengthLog = Math.log(length);
 
-    while (i <= length) {
-      const isFraction = Helper.isFraction(result, i);
-      result = isFraction ? result + 1 : result;
-      i = isFraction ? 1 : i + 1;
-    }
+    // with some help from https://en.wikipedia.org/wiki/Euclidean_algorithm
+    primes.forEach((prime: number) => {
+      let logPrime = Math.log(prime);
+      let logResult = Math.floor(lengthLog / logPrime);
+
+      result *= Math.pow(prime, logResult);
+    });
 
     return result.toString();
   }
