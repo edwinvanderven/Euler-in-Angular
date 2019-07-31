@@ -20,11 +20,11 @@ export class ThirtiethProblem implements IProblem {
     return result.toString();
   }
 
-  private isFifthPower(x: number) : boolean {
+  private isFifthPower(x: number): boolean {
     return this.getSum(x) === x;
   }
 
-  private getSum(x: number) : number {
+  private getSum(x: number): number {
     let sum = 0;
     while (x !== 0) {
       sum += Math.pow(x % 10, 5);

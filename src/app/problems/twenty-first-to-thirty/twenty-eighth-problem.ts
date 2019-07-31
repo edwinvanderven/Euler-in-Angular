@@ -14,7 +14,7 @@ export class TwentyEighthProblem implements IProblem {
   getAnswer(): string {
     let result = 1;
     let d = 1;
-    let size = 1001;
+    const size = 1001;
 
     for (let i = 2; i <= size; i += 2) {
       result += 4 * d + 10 * i;

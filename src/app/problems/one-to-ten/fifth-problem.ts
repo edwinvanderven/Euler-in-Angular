@@ -14,8 +14,8 @@ export class FifthProblem implements IProblem {
 
     // with some help from https://en.wikipedia.org/wiki/Euclidean_algorithm
     primes.forEach((prime: number) => {
-      let logPrime = Math.log(prime);
-      let logResult = Math.floor(lengthLog / logPrime);
+      const logPrime = Math.log(prime);
+      const logResult = Math.floor(lengthLog / logPrime);
 
       result *= Math.pow(prime, logResult);
     });

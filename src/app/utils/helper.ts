@@ -16,7 +16,7 @@ export class Helper {
   }
 
   static primeList(start: number, end: number): number[] {
-    let primes: number[] = [];
+    const primes: number[] = [];
     for (let i = start; i <= end; i++) {
       if (this.isPrime(i)) primes.push(i);
     }
