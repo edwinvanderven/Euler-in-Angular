@@ -15,17 +15,17 @@ export class ThirtySecondProblem implements IProblem {
     return result.toString();
   }
 
-  private hasPandigitalProduct(n: number) : boolean {
+  private hasPandigitalProduct(n: number): boolean {
     for (let i = 1; i <= n; i++) {
-      if (n % i === 0 && this.isPandigital('' + n + i + n/i)) return true;
+      if (n % i === 0 && this.isPandigital('' + n + i + n / i)) return true;
     }
     return false;
   }
 
-  private isPandigital(s: string) : boolean {
+  private isPandigital(s: string): boolean {
     if (s.length !== 9) return false;
     return this.sortString(s) === '123456789';
   }
 
-  private sortString = (s: string) : string => s.split('').sort().join('');
+  private sortString = (s: string): string => s.split('').sort().join('');
 }

@@ -1,6 +1,8 @@
 import { FirstProblem, SecondProblem, ThirdProblem, FourthProblem, FifthProblem, SixthProblem, SeventhProblem, EighthProblem, NinethProblem, TenthProblem } from './problems/one-to-ten/index';
-import { EleventhProblem, TwelfthProblem, ThirteenthProblem, FourteenthProblem, FifteenthProblem, SixteenthProblem, SeventeenthProblem, EighteenthProblem, NineteenthProblem, TwentiethProblem } from './problems/eleven-to-twenty/index';
-import { TwentyFirstProblem, TwentySecondProblem, TwentyThirdProblem, TwentyFourthProblem, TwentyFifthProblem, TwentySixthProblem, TwentySeventhProblem, TwentyEighthProblem, TwentyNinthProblem, ThirtiethProblem } from './problems/twenty-first-to-thirty/index';
+import { EleventhProblem, TwelfthProblem, ThirteenthProblem, FourteenthProblem, FifteenthProblem,
+          SixteenthProblem, SeventeenthProblem, EighteenthProblem, NineteenthProblem, TwentiethProblem } from './problems/eleven-to-twenty/index';
+import { TwentyFirstProblem, TwentySecondProblem, TwentyThirdProblem, TwentyFourthProblem, TwentyFifthProblem,
+          TwentySixthProblem, TwentySeventhProblem, TwentyEighthProblem, TwentyNinthProblem, ThirtiethProblem } from './problems/twenty-first-to-thirty/index';
 import { ThirtyFirstProblem } from './problems/thirty-one-to-forty/thirty-first-problem';
 import { ThirtySecondProblem } from './problems/thirty-one-to-forty/thirty-second-problem';
 import { ThirtyThirdProblem } from './problems/thirty-one-to-forty/thirty-third-problem';

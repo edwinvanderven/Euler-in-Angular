@@ -16,7 +16,7 @@ export class ThirtyFirstProblem implements IProblem {
 
     coins.forEach((coin: number) => {
       for (let i = coin; i <= total; i++) {
-        ways[i] += ways[i-coin];
+        ways[i] += ways[i - coin];
       }
     });
 
