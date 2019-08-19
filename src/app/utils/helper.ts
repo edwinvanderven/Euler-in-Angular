@@ -117,4 +117,6 @@ export class Helper {
     }
     return arr[n];
   }
+
+  static isPalindrome = (s: string): boolean => s === s.split('').reverse().join('');
 }

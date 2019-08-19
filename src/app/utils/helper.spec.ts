@@ -158,4 +158,19 @@ describe('Helper', () => {
       expect(Helper.fibonacci(100).toJSNumber()).toEqual(354224848179261900000);
     });
   });
+
+  describe('isPalindrome', () => {
+    it('shold return true if the provided string is a palindrome', () => {
+      expect(Helper.isPalindrome('111')).toBeTruthy();
+      expect(Helper.isPalindrome('111222111')).toBeTruthy();
+      expect(Helper.isPalindrome('abcdeffedcba')).toBeTruthy();
+      expect(Helper.isPalindrome('step on no pets')).toBeTruthy();
+      expect(Helper.isPalindrome('live on time,emit no evil')).toBeTruthy();
+    });
+    it('should return false if the provided string is not a palindrome', () => {
+      expect(Helper.isPalindrome('1122111')).toBeFalsy();
+      expect(Helper.isPalindrome('abcdedcbb')).toBeFalsy();
+      expect(Helper.isPalindrome('334455667788 887766554433 ')).toBeFalsy();
+    });
+  });
 });

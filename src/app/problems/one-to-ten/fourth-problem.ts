@@ -1,4 +1,5 @@
 import { IProblem } from '../../app.component.model';
+import { Helper } from 'src/app/utils/helper';
 
 export class FourthProblem implements IProblem {
   public title = 'Problem 4';
@@ -12,13 +13,11 @@ export class FourthProblem implements IProblem {
     for (let i = length; i > 100; i--) {
       for (let j = length; j > 100; j--) {
         const cal = i * j;
-        const isAnswer = cal > result && this.isPalindrome('' + cal);
+        const isAnswer = cal > result && Helper.isPalindrome('' + cal);
         result = isAnswer ? cal : result;
       }
     }
 
     return result.toString();
   }
-
-  private isPalindrome = (s: string): boolean => s === s.split('').reverse().join('');
 }
