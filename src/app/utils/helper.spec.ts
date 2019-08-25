@@ -173,4 +173,21 @@ describe('Helper', () => {
       expect(Helper.isPalindrome('334455667788 887766554433 ')).toBeFalsy();
     });
   });
+
+  describe('isPandigital', () => {
+    it('should return true if a string is pandigital', () => {
+      expect(Helper.isPandigital('123456789')).toBeTruthy();
+      expect(Helper.isPandigital('987654321')).toBeTruthy();
+      expect(Helper.isPandigital('123789456')).toBeTruthy();
+      expect(Helper.isPandigital('987123654')).toBeTruthy();
+      expect(Helper.isPandigital('192837465')).toBeTruthy();
+      expect(Helper.isPandigital('564738291')).toBeTruthy();
+    });
+    it('should return false if a string is not pandigital', () => {
+      expect(Helper.isPandigital('1')).toBeFalsy();
+      expect(Helper.isPandigital('111111111')).toBeFalsy();
+      expect(Helper.isPandigital('123456780')).toBeFalsy();
+      expect(Helper.isPandigital('918270643')).toBeFalsy();
+    });
+  });
 });

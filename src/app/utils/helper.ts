@@ -119,4 +119,11 @@ export class Helper {
   }
 
   static isPalindrome = (s: string): boolean => s === s.split('').reverse().join('');
+
+  static isPandigital(s: string): boolean {
+    if (s.length !== 9) return false;
+    return this.sortString(s) === '123456789';
+  }
+
+  private static sortString = (s: string): string => s.split('').sort().join('');
 }

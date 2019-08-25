@@ -1,4 +1,5 @@
 import { IProblem } from '../../app.component.model';
+import { Helper } from 'src/app/utils/helper';
 
 export class ThirtySecondProblem implements IProblem {
   public title = 'Problem 32';
@@ -17,15 +18,8 @@ export class ThirtySecondProblem implements IProblem {
 
   private hasPandigitalProduct(n: number): boolean {
     for (let i = 1; i <= n; i++) {
-      if (n % i === 0 && this.isPandigital('' + n + i + n / i)) return true;
+      if (n % i === 0 && Helper.isPandigital('' + n + i + n / i)) return true;
     }
     return false;
   }
-
-  private isPandigital(s: string): boolean {
-    if (s.length !== 9) return false;
-    return this.sortString(s) === '123456789';
-  }
-
-  private sortString = (s: string): string => s.split('').sort().join('');
 }
