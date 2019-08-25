@@ -7,11 +7,11 @@ export class Helper {
   private static tens = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
 
   static isPrime(x: number): boolean {
-    if (x === 0 || x === 1) { return false; }
-    if (x === 2 || x === 3) { return true; }
-    if (x % 2 === 0 || x % 3 === 0) { return false; }
+    if (x === 0 || x === 1) return false;
+    if (x === 2 || x === 3) return true;
+    if (x % 2 === 0 || x % 3 === 0) return false;
     const length = Math.sqrt(x);
-    for (let i = 5; i <= length; i += 2) { if (x % i === 0) { return false; } }
+    for (let i = 5; i <= length; i += 2) if (x % i === 0) return false;
     return true;
   }
 

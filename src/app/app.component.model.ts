@@ -9,6 +9,7 @@ import { ThirtyThirdProblem } from './problems/thirty-one-to-forty/thirty-third-
 import { ThirtyFourthProblem } from './problems/thirty-one-to-forty/thirty-fourth-problem';
 import { ThirtyFifthProblem } from './problems/thirty-one-to-forty/thirty-fifth-problem';
 import { ThirtySixthProblem } from './problems/thirty-one-to-forty/thirty-sixth-problem';
+import { ThirtySeventhProblem } from './problems/thirty-one-to-forty/thirty-seventh-problem';
 
 export interface IProblem {
   title: string;
@@ -17,7 +18,7 @@ export interface IProblem {
 }
 
 export const PROBLEMS: IProblem[] = [
-  new ThirtySixthProblem(),
+  new ThirtySeventhProblem(), new ThirtySixthProblem(),
   new ThirtyFifthProblem(), new ThirtyFourthProblem(), new ThirtyThirdProblem(), new ThirtySecondProblem(), new ThirtyFirstProblem(),
   new ThirtiethProblem(), new TwentyNinthProblem(), new TwentyEighthProblem(), new TwentySeventhProblem(), new TwentySixthProblem(),
   new TwentyFifthProblem(), new TwentyFourthProblem(), new TwentyThirdProblem(), new TwentySecondProblem(), new TwentyFirstProblem(),
