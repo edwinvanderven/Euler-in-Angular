@@ -16,10 +16,10 @@ export class ThirtyFifthProblem implements IProblem {
     return result.toString();
   }
 
-  private isCircularPrime(x: number) : boolean {
-    let str = x.toString();
+  private isCircularPrime(x: number): boolean {
+    const str = x.toString();
     for (let i = 0; i < str.length; i++) {
-      if (!Helper.isPrime(parseInt(str.substring(i) + str.substring(0, i)))) {
+      if (!Helper.isPrime(parseInt(str.substring(i) + str.substring(0, i), 10))) {
         return false;
       }
     }

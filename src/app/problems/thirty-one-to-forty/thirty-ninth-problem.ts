@@ -19,7 +19,7 @@ export class ThirtyNinthProblem implements IProblem {
     return result.toString();
   }
 
-  private numberOfSolutions(n: number) : number {
+  private numberOfSolutions(n: number): number {
     let count = 0;
     for (let a = 1; a <= n; a++) {
       for (let b = a; b <= n; b++) {

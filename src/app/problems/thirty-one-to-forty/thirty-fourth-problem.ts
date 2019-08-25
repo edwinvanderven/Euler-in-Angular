@@ -22,7 +22,7 @@ export class ThirtyFourthProblem implements IProblem {
 
   private getSum(x: number): number {
     let sum = 0;
-    while (x != 0) {
+    while (x !== 0) {
       sum += this.factorials[x % 10];
       x = Math.floor(x / 10);
     }

@@ -15,23 +15,23 @@ export class ThirtySeventhProblem implements IProblem {
       if (this.isTruncatablePrime(i)) {
         count++;
         result += i;
-      } 
+      }
     }
     return result.toString();
   }
 
-  private isTruncatablePrime(x: number) : boolean {
+  private isTruncatablePrime(x: number): boolean {
     return this.isPrimeLeftToRight(x) && this.isPrimeRightToLeft(x);
   }
 
-  private isPrimeLeftToRight(x: number) : boolean {
+  private isPrimeLeftToRight(x: number): boolean {
     for (let i = 10; i <= x; i *= 10) {
       if (!Helper.isPrime(x % i)) return false;
     }
     return true;
   }
-  private isPrimeRightToLeft(x: number) : boolean {
-    while (x != 0) {
+  private isPrimeRightToLeft(x: number): boolean {
+    while (x !== 0) {
       if (!Helper.isPrime(x)) return false;
       x = Math.floor(x / 10);
     }
