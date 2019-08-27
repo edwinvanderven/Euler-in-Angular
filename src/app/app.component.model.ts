@@ -1,17 +1,19 @@
-import { FirstProblem, SecondProblem, ThirdProblem, FourthProblem, FifthProblem, SixthProblem, SeventhProblem, EighthProblem, NinethProblem, TenthProblem } from './problems/one-to-ten/index';
-import { EleventhProblem, TwelfthProblem, ThirteenthProblem, FourteenthProblem, FifteenthProblem,
-          SixteenthProblem, SeventeenthProblem, EighteenthProblem, NineteenthProblem, TwentiethProblem } from './problems/eleven-to-twenty/index';
-import { TwentyFirstProblem, TwentySecondProblem, TwentyThirdProblem, TwentyFourthProblem, TwentyFifthProblem,
-          TwentySixthProblem, TwentySeventhProblem, TwentyEighthProblem, TwentyNinthProblem, ThirtiethProblem } from './problems/twenty-first-to-thirty/index';
-import { ThirtyFirstProblem } from './problems/thirty-one-to-forty/thirty-first-problem';
-import { ThirtySecondProblem } from './problems/thirty-one-to-forty/thirty-second-problem';
-import { ThirtyThirdProblem } from './problems/thirty-one-to-forty/thirty-third-problem';
-import { ThirtyFourthProblem } from './problems/thirty-one-to-forty/thirty-fourth-problem';
-import { ThirtyFifthProblem } from './problems/thirty-one-to-forty/thirty-fifth-problem';
-import { ThirtySixthProblem } from './problems/thirty-one-to-forty/thirty-sixth-problem';
-import { ThirtySeventhProblem } from './problems/thirty-one-to-forty/thirty-seventh-problem';
-import { ThirtyEighthProblem } from './problems/thirty-one-to-forty/thirty-eighth-problem';
-import { ThirtyNinthProblem } from './problems/thirty-one-to-forty/thirty-ninth-problem';
+import { FirstProblem, SecondProblem, ThirdProblem, FourthProblem, FifthProblem, SixthProblem, SeventhProblem, EighthProblem, NinethProblem,  } from './problems/1-to-9/index';
+import { TenthProblem, EleventhProblem, TwelfthProblem, ThirteenthProblem, FourteenthProblem,
+          FifteenthProblem, SixteenthProblem, SeventeenthProblem, EighteenthProblem, NineteenthProblem } from './problems/10-to-19/index';
+import { TwentiethProblem, TwentyFirstProblem, TwentySecondProblem, TwentyThirdProblem, TwentyFourthProblem,
+          TwentyFifthProblem, TwentySixthProblem, TwentySeventhProblem, TwentyEighthProblem, TwentyNinthProblem } from './problems/20-to-29/index';
+
+import { ThirtiethProblem } from './problems/30-to-39/30';
+import { ThirtyFirstProblem } from './problems/30-to-39/31';
+import { ThirtySecondProblem } from './problems/30-to-39/32';
+import { ThirtyThirdProblem } from './problems/30-to-39/33';
+import { ThirtyFourthProblem } from './problems/30-to-39/34';
+import { ThirtyFifthProblem } from './problems/30-to-39/35';
+import { ThirtySixthProblem } from './problems/30-to-39/36';
+import { ThirtySeventhProblem } from './problems/30-to-39/37';
+import { ThirtyEighthProblem } from './problems/30-to-39/38';
+import { ThirtyNinthProblem } from './problems/30-to-39/39';
 
 export interface IProblem {
   title: string;
