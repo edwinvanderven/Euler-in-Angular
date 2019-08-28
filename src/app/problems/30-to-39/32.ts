@@ -1,7 +1,7 @@
 import { IProblem } from '../../app.component.model';
 import { Helper } from 'src/app/utils/helper';
 
-export class ThirtySecondProblem implements IProblem {
+export class P32 implements IProblem {
   public title = 'Problem 32';
   public description = 'We shall say that an n-digit number is pandigital if it makes use of all the digits 1 to n exactly once; for example, the 5-digit number, 15234, is 1 through 5 pandigital.' +
                         '\nThe product 7254 is unusual, as the identity, 39 × 186 = 7254, containing multiplicand, multiplier, and product is 1 through 9 pandigital.' +

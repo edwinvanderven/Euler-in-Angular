@@ -1,6 +1,6 @@
 import { IProblem } from '../../app.component.model';
 
-export class SixthProblem implements IProblem {
+export class P6 implements IProblem {
   public title = 'Problem 6';
   public description = 'The sum of the squares of the first ten natural numbers is, \n12 + 22 + ... + 102 = 385 \nThe square of the sum of the first ten natural numbers is,' +
                         '\n(1 + 2 + ... + 10)2 = 552 = 3025' +

@@ -1,6 +1,6 @@
 import { IProblem } from '../../app.component.model';
 
-export class EleventhProblem implements IProblem {
+export class P11 implements IProblem {
   public title = 'Problem 11';
   public description = 'In the 20×20 grid below, four numbers along a diagonal line have been marked in red..' +
                         '\nThe product of these numbers is 26 × 63 × 78 × 14 = 1788696.' +

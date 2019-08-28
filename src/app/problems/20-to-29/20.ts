@@ -2,7 +2,7 @@ import { IProblem } from '../../app.component.model';
 import { Helper } from 'src/app/utils/helper';
 import * as bigInt from 'big-integer';
 
-export class TwentiethProblem implements IProblem {
+export class P20 implements IProblem {
   public title = 'Problem 20';
   public description = 'n! means n × (n − 1) × ... × 3 × 2 × 1' +
                         '\nFor example, 10! = 10 × 9 × ... × 3 × 2 × 1 = 3628800,' +

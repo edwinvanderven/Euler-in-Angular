@@ -1,7 +1,7 @@
 import { IProblem } from '../../app.component.model';
 import { Helper } from '../../utils/helper';
 
-export class FifthProblem implements IProblem {
+export class P5 implements IProblem {
   public title = 'Problem 5';
   public description = '2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder. ' +
                         '\nWhat is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?';

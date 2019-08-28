@@ -1,10 +1,10 @@
-import { FourthProblem } from './4';
+import { P4 } from './4';
 
-describe('FourthProblem', () => {
-  let problem: FourthProblem;
+describe('P4', () => {
+  let problem: P4;
 
   beforeEach(() => {
-    problem = new FourthProblem();
+    problem = new P4();
   });
 
   it('should exist', () => {

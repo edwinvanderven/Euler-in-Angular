@@ -1,6 +1,6 @@
 import { IProblem } from '../../app.component.model';
 
-export class ThirtyNinthProblem implements IProblem {
+export class P39 implements IProblem {
   public title = 'Problem 39';
   public description = 'If p is the perimeter of a right angle triangle with integral length sides, {a,b,c}, there are exactly three solutions for p = 120.' +
                         '\n{20,48,52}, {24,45,51}, {30,40,50}' +

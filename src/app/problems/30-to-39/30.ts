@@ -1,6 +1,6 @@
 import { IProblem } from '../../app.component.model';
 
-export class ThirtiethProblem implements IProblem {
+export class P30 implements IProblem {
   public title = 'Problem 30';
   public description = 'Surprisingly there are only three numbers that can be written as the sum of fourth powers of their digits:' +
                         '\n1634 = 14 + 64 + 34 + 44' +

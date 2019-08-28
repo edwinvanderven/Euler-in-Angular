@@ -1,7 +1,7 @@
 import { IProblem } from '../../app.component.model';
 import { Helper } from 'src/app/utils/helper';
 
-export class ThirteenthProblem implements IProblem {
+export class P13 implements IProblem {
   public title = 'Problem 13';
   public description = 'Work out the first ten digits of the sum of the following one-hundred 50-digit numbers.';
 

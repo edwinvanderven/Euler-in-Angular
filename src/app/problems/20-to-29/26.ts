@@ -1,6 +1,6 @@
 import { IProblem } from '../../app.component.model';
 
-export class TwentySixthProblem implements IProblem {
+export class P26 implements IProblem {
   public title = 'Problem 26';
   public description = 'A unit fraction contains 1 in the numerator. The decimal representation of the unit fractions with denominators 2 to 10 are given:' +
                        '\n1/2	= 	0.5, 1/3	= 	0.(3), 1/4	= 	0.25, 1/5	= 	0.2, 1/6	= 	0.1(6), 1/7	= 	0.(142857), 1/8	= 	0.125, 1/9	= 	0.(1), 1/10	= 	0.1' +

@@ -1,7 +1,7 @@
 import { IProblem } from '../../app.component.model';
 import { Helper } from '../../utils/helper';
 
-export class NinethProblem implements IProblem {
+export class P9 implements IProblem {
   public title = 'Problem 9';
   public description = 'A Pythagorean triplet is a set of three natural numbers, a < b < c, for which' +
                         '\na2 + b2 = c2' +

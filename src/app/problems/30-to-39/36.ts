@@ -1,7 +1,7 @@
 import { IProblem } from '../../app.component.model';
 import { Helper } from 'src/app/utils/helper';
 
-export class ThirtySixthProblem implements IProblem {
+export class P36 implements IProblem {
   public title = 'Problem 36';
   public description = 'The decimal number, 585 = 10010010012 (binary), is palindromic in both bases.' +
                         '\nFind the sum of all numbers, less than one million, which are palindromic in base 10 and base 2.' +

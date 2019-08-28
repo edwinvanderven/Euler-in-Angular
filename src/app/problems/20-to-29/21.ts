@@ -1,7 +1,7 @@
 import { IProblem } from '../../app.component.model';
 import { Helper } from 'src/app/utils/helper';
 
-export class TwentyFirstProblem implements IProblem {
+export class P21 implements IProblem {
   public title = 'Problem 21';
   public description = 'Let d(n) be defined as the sum of proper divisors of n (numbers less than n which divide evenly into n).' +
                         '\nIf d(a) = b and d(b) = a, where a ≠ b, then a and b are an amicable pair and each of a and b are called amicable numbers.' +

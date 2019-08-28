@@ -1,6 +1,6 @@
 import { IProblem } from '../../app.component.model';
 
-export class TwentyNinthProblem implements IProblem {
+export class P29 implements IProblem {
   public title = 'Problem 29';
   public description = 'Consider all integer combinations of ab for 2 ≤ a ≤ 5 and 2 ≤ b ≤ 5:' +
                         '\n2^2=4, 2^3=8, 2^4=16, 2^5=32' +

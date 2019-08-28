@@ -1,6 +1,6 @@
 import { IProblem } from '../../app.component.model';
 
-export class NineteenthProblem implements IProblem {
+export class P19 implements IProblem {
   public title = 'Problem 19';
   public description = 'You are given the following information, but you may prefer to do some research for yourself.' +
                         '\n1 Jan 1900 was a Monday.' +

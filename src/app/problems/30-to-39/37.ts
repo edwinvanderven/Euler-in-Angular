@@ -1,7 +1,7 @@
 import { IProblem } from '../../app.component.model';
 import { Helper } from 'src/app/utils/helper';
 
-export class ThirtySeventhProblem implements IProblem {
+export class P37 implements IProblem {
   public title = 'Problem 37';
   public description = 'The number 3797 has an interesting property. Being prime itself, it is possible to continuously remove digits from left to right, and remain prime at each stage: 3797, 797, 97, and 7. ' +
                         '\nSimilarly we can work from right to left: 3797, 379, 37, and 3.' +

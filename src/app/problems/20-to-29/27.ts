@@ -1,7 +1,7 @@
 import { IProblem } from '../../app.component.model';
 import { Helper } from 'src/app/utils/helper';
 
-export class TwentySeventhProblem implements IProblem {
+export class P27 implements IProblem {
   public title = 'Problem 27';
   public description = 'Euler discovered the remarkable quadratic formula:' +
                         '\nn2+n+41' +

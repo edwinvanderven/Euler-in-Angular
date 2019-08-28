@@ -1,6 +1,6 @@
 import { IProblem } from '../../app.component.model';
 
-export class ThirtyFirstProblem implements IProblem {
+export class P31 implements IProblem {
   public title = 'Problem 31';
   public description = 'In England the currency is made up of pound, £, and pence, p, and there are eight coins in general circulation:' +
                         '\n1p, 2p, 5p, 10p, 20p, 50p, £1 (100p) and £2 (200p).' +

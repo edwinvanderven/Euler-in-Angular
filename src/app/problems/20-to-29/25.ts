@@ -2,7 +2,7 @@ import { IProblem } from '../../app.component.model';
 import * as bigInt from 'big-integer';
 import { Helper } from 'src/app/utils/helper';
 
-export class TwentyFifthProblem implements IProblem {
+export class P25 implements IProblem {
   public title = 'Problem 25';
   public description = 'The Fibonacci sequence is defined by the recurrence relation:' +
                         '\nFn = Fn−1 + Fn−2, where F1 = 1 and F2 = 1.' +

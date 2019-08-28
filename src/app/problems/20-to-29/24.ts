@@ -1,6 +1,6 @@
 import { IProblem } from '../../app.component.model';
 
-export class TwentyFourthProblem implements IProblem {
+export class P24 implements IProblem {
   public title = 'Problem 24';
   public description = 'A permutation is an ordered arrangement of objects. For example, 3124 is one possible permutation of the digits 1, 2, 3 and 4. ' +
                         '\nIf all of the permutations are listed numerically or alphabetically, we call it lexicographic order. The lexicographic permutations of 0, 1 and 2 are:' +

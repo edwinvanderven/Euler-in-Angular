@@ -1,7 +1,7 @@
 import { IProblem } from '../../app.component.model';
 import { Helper } from '../../utils/helper';
 
-export class TenthProblem implements IProblem {
+export class P10 implements IProblem {
   public title = 'Problem 10';
   public description = 'The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.' +
                         '\nFind the sum of all the primes below two million.';

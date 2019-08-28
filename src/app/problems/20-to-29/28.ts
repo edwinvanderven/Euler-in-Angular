@@ -1,6 +1,6 @@
 import { IProblem } from '../../app.component.model';
 
-export class TwentyEighthProblem implements IProblem {
+export class P28 implements IProblem {
   public title = 'Problem 28';
   public description = 'Starting with the number 1 and moving to the right in a clockwise direction a 5 by 5 spiral is formed as follows: ' +
                         '\n21 22 23 24 25' +

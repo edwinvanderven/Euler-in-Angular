@@ -3,7 +3,7 @@ import { Helper } from 'src/app/utils/helper';
 
 const LIMIT = 28123;
 
-export class TwentyThirdProblem implements IProblem {
+export class P23 implements IProblem {
   public title = 'Problem 23';
   public description = 'A perfect number is a number for which the sum of its proper divisors is exactly equal to the number. ' +
                         '\nFor example, the sum of the proper divisors of 28 would be 1 + 2 + 4 + 7 + 14 = 28, which means that 28 is a perfect number.' +

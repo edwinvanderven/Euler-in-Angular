@@ -1,7 +1,7 @@
 import { IProblem } from '../../app.component.model';
 import { Helper } from 'src/app/utils/helper';
 
-export class ThirtyEighthProblem implements IProblem {
+export class P38 implements IProblem {
   public title = 'Problem 38';
   public description = 'Take the number 192 and multiply it by each of 1, 2, and 3:' +
                         '\n192 × 1 = 192' +

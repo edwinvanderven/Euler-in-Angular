@@ -1,10 +1,10 @@
-import { TwentyFourthProblem } from './24';
+import { P24 } from './24';
 
-describe('TwentyFourthProblem', () => {
-  let problem: TwentyFourthProblem;
+describe('P24', () => {
+  let problem: P24;
 
   beforeEach(() => {
-    problem = new TwentyFourthProblem();
+    problem = new P24();
   });
 
   it('should exist', () => {

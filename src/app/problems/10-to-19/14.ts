@@ -1,6 +1,6 @@
 import { IProblem } from '../../app.component.model';
 
-export class FourteenthProblem implements IProblem {
+export class P14 implements IProblem {
   public title = 'Problem 14';
   public description = 'The following iterative sequence is defined for the set of positive integers:' +
                         '\nn → n/2 (n is even)' +

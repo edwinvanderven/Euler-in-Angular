@@ -1,6 +1,6 @@
 import { IProblem } from '../../app.component.model';
 
-export class EighthProblem implements IProblem {
+export class P8 implements IProblem {
   public title = 'Problem 8';
   public description = 'The four adjacent digits in the 1000-digit number that have the greatest product are 9 × 9 × 8 × 9 = 5832.' +
                         '\nFind the thirteen adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?';
