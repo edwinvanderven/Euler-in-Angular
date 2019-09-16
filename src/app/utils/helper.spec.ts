@@ -177,18 +177,43 @@ describe('Helper', () => {
 
   describe('isPandigital', () => {
     it('should return true if a string is pandigital', () => {
-      expect(Helper.isPandigital('123456789')).toBeTruthy();
-      expect(Helper.isPandigital('987654321')).toBeTruthy();
-      expect(Helper.isPandigital('123789456')).toBeTruthy();
-      expect(Helper.isPandigital('987123654')).toBeTruthy();
-      expect(Helper.isPandigital('192837465')).toBeTruthy();
-      expect(Helper.isPandigital('564738291')).toBeTruthy();
+      expect(Helper.isPandigital('1234567890')).toBeTruthy();
+      expect(Helper.isPandigital('0987654321')).toBeTruthy();
+      expect(Helper.isPandigital('1237809456')).toBeTruthy();
+      expect(Helper.isPandigital('0987123654')).toBeTruthy();
+      expect(Helper.isPandigital('1928370465')).toBeTruthy();
+      expect(Helper.isPandigital('5647308291')).toBeTruthy();
     });
     it('should return false if a string is not pandigital', () => {
-      expect(Helper.isPandigital('1')).toBeFalsy();
+      expect(Helper.isPandigital('1012')).toBeFalsy();
       expect(Helper.isPandigital('111111111')).toBeFalsy();
-      expect(Helper.isPandigital('123456780')).toBeFalsy();
+      expect(Helper.isPandigital('12345670')).toBeFalsy();
       expect(Helper.isPandigital('918270643')).toBeFalsy();
+    });
+
+    it('should return true if a string with less numbers than 9 is pandigital', () => {
+      expect(Helper.isPandigital('1')).toBeTruthy();
+      expect(Helper.isPandigital('12')).toBeTruthy();
+      expect(Helper.isPandigital('123')).toBeTruthy();
+      expect(Helper.isPandigital('1234')).toBeTruthy();
+      expect(Helper.isPandigital('12345')).toBeTruthy();
+      expect(Helper.isPandigital('123456')).toBeTruthy();
+      expect(Helper.isPandigital('1234567')).toBeTruthy();
+      expect(Helper.isPandigital('12345678')).toBeTruthy();
+      expect(Helper.isPandigital('123456789')).toBeTruthy();
+      expect(Helper.isPandigital('2431')).toBeTruthy();
+      expect(Helper.isPandigital('2453617')).toBeTruthy();
+      expect(Helper.isPandigital('7162534')).toBeTruthy();
+      expect(Helper.isPandigital('15243')).toBeTruthy();
+      expect(Helper.isPandigital('231')).toBeTruthy();
+    });
+    it('should return false if a string with less numbers than 9 is not pandigital', () => {
+      expect(Helper.isPandigital('3456')).toBeFalsy();
+      expect(Helper.isPandigital('789')).toBeFalsy();
+      expect(Helper.isPandigital('11')).toBeFalsy();
+      expect(Helper.isPandigital('12344')).toBeFalsy();
+      expect(Helper.isPandigital('2356')).toBeFalsy();
+      expect(Helper.isPandigital('172635')).toBeFalsy();
     });
   });
 });

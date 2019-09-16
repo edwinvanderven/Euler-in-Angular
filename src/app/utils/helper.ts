@@ -121,9 +121,25 @@ export class Helper {
   static isPalindrome = (s: string): boolean => s === s.split('').reverse().join('');
 
   static isPandigital(s: string): boolean {
-    if (s.length !== 9) return false;
-    return this.sortString(s) === '123456789';
+    if (s.length > 10) return false; // largest string is 1234567890
+    const sortedString = this.sortString(s)
+    return '1234567890'.indexOf(sortedString) === 0;
   }
 
-  private static sortString = (s: string): string => s.split('').sort().join('');
+  private static sortString = (s: string): string => s.split('').sort(Helper.sortFn).join('');
+  private static sortFn(a: string, b: string): number {
+    if (a === '0') {
+      return 1;
+    }
+    if (b === '0') {
+      return -1;
+    }
+    if (a > b) {
+      return 1;
+    }
+    if (b > a) {
+      return -1;
+    }
+    return 0;
+  }
 }
