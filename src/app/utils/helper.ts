@@ -122,7 +122,7 @@ export class Helper {
 
   static isPandigital(s: string): boolean {
     if (s.length > 10) return false; // largest string is 1234567890
-    const sortedString = this.sortString(s)
+    const sortedString = this.sortString(s);
     return '1234567890'.indexOf(sortedString) === 0;
   }
 

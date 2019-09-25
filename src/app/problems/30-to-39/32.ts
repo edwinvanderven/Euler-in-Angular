@@ -20,7 +20,7 @@ export class P32 implements IProblem {
     for (let i = 1; i <= n; i++) {
       if (n % i === 0) {
         const sum = '' + n + i + n / i;
-        const isCorrectSize = !(sum.length != 9);
+        const isCorrectSize = !(sum.length !== 9);
         if (isCorrectSize && Helper.isPandigital(sum)) return true;
       }
     }

@@ -23,7 +23,7 @@ export class P40 implements IProblem {
     const numbers: number[] = [];
     locationsToCheck.forEach((x: number) => {
       // add the +1 since we want to exclude the '0.' at the start
-      numbers.push(parseInt(fraction.charAt(x + 1)));
+      numbers.push(parseInt(fraction.charAt(x + 1), 10));
     });
 
     result = numbers.reduce((a, b) => a * b);
