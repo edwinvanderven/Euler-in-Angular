@@ -18,7 +18,11 @@ export class P32 implements IProblem {
 
   private hasPandigitalProduct(n: number): boolean {
     for (let i = 1; i <= n; i++) {
-      if (n % i === 0 && Helper.isPandigital('' + n + i + n / i)) return true;
+      if (n % i === 0) {
+        const sum = '' + n + i + n / i;
+        const isCorrectSize = !(sum.length != 9);
+        if (isCorrectSize && Helper.isPandigital(sum)) return true;
+      }
     }
     return false;
   }
