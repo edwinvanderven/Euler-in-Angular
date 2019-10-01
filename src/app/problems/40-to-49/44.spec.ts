@@ -1,6 +1,6 @@
 import { P44 } from './44';
 
-describe('P43', () => {
+describe('P44', () => {
   let problem: P44;
 
   beforeEach(() => {
