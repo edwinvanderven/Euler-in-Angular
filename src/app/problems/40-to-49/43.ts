@@ -52,7 +52,7 @@ export class P43 implements IProblem {
     const e = 4130952867;
     const f = 4160357289;
 
-    result = a+b+c+d+e+f;
+    result = a + b + c + d + e + f;
     return result.toString();
   }
 }
