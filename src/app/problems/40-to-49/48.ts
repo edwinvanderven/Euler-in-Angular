@@ -1,5 +1,4 @@
 import { IProblem } from '../../app.component.model';
-import * as bigInt from 'big-integer';
 
 export class P48 implements IProblem {
   public title = 'Problem 48';

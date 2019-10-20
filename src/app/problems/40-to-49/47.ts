@@ -1,5 +1,4 @@
 import { IProblem } from '../../app.component.model';
-import { Helper } from 'src/app/utils/helper';
 
 export class P47 implements IProblem {
   public title = 'Problem 47';
