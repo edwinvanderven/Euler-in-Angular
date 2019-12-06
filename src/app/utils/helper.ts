@@ -126,6 +126,10 @@ export class Helper {
     return '1234567890'.indexOf(sortedString) === 0;
   }
 
+  static hasSameDigits(x: number, y: number): boolean {
+    return this.sortString(x.toString()) === this.sortString(y.toString());
+  }
+
   private static sortString = (s: string): string => s.split('').sort(Helper.sortFn).join('');
   private static sortFn(a: string, b: string): number {
     if (a === '0') {

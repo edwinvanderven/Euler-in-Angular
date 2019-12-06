@@ -216,4 +216,21 @@ describe('Helper', () => {
       expect(Helper.isPandigital('172635')).toBeFalsy();
     });
   });
+
+  describe('hasSameDigits', () => {
+    it('should return true for strings that contain the same digits', () => {
+      expect(Helper.hasSameDigits(123, 321)).toBeTruthy();
+      expect(Helper.hasSameDigits(1423, 3214)).toBeTruthy();
+      expect(Helper.hasSameDigits(14253, 32514)).toBeTruthy();
+      expect(Helper.hasSameDigits(14236, 32164)).toBeTruthy();
+      expect(Helper.hasSameDigits(147623, 673214)).toBeTruthy();
+    });
+    it('should return false for strings that do not contain the same digits', () => {
+      expect(Helper.hasSameDigits(1, 12)).toBeFalsy();
+      expect(Helper.hasSameDigits(13, 12)).toBeFalsy();
+      expect(Helper.hasSameDigits(123, 12)).toBeFalsy();
+      expect(Helper.hasSameDigits(9876, 1234)).toBeFalsy();
+      expect(Helper.hasSameDigits(987654321, 12345678)).toBeFalsy();
+    });
+  });
 });
