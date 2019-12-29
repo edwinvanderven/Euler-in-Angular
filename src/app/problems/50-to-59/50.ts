@@ -1,6 +1,5 @@
 import { IProblem } from '../../app.component.model';
 import { Helper } from 'src/app/utils/helper';
-import { getMaxListeners } from 'cluster';
 
 export class P50 implements IProblem {
   public title = 'Problem 50';

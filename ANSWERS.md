@@ -1,0 +1,56 @@
+# Answers
+
+Answers to the Euler problems so far:
+
+```txt
+Problem 001: 233168
+Problem 002: 4613732
+Problem 003: 6857
+Problem 004: 906609
+Problem 005: 232792560
+Problem 006: 25164150
+Problem 007: 104743
+Problem 008: 23514624000
+Problem 009: 31875000
+Problem 010: 142913828922
+Problem 011: 70600674
+Problem 012: 76576500
+Problem 013: 5537376230
+Problem 014: 837799
+Problem 015: 137846528820
+Problem 016: 1366
+Problem 017: 21124
+Problem 018: 1074
+Problem 019: 171
+Problem 020: 683
+Problem 021: 31626
+Problem 022: 871198282
+Problem 023: 4179871
+Problem 024: 2783915460
+Problem 025: 4782
+Problem 026: 983
+Problem 027: -59231
+Problem 028: 669171001
+Problem 029: 9183
+Problem 030: 443839
+Problem 031: 73682
+Problem 032: 45228
+Problem 033: 100
+Problem 034: 40730
+Problem 035: 55
+Problem 036: 872187
+Problem 037: 748317
+Problem 038: 932718654
+Problem 039: 840
+Problem 040: 210
+Problem 041: 7652413
+Problem 042: 162
+Problem 043: 16695334890
+Problem 044: 5482660
+Problem 045: 1533776805
+Problem 046: 5777
+Problem 047: 134043
+Problem 048: 9110846700
+Problem 049: 296962999629
+Problem 050: 997651
+```
