@@ -135,5 +135,8 @@
       }
     }
   },
-  "defaultProject": "euler-in-angular"
+  "defaultProject": "euler-in-angular",
+  "cli": {
+    "analytics": "19060987-e8e3-4107-9aa0-eb96a6d0235d"
+  }
 }
