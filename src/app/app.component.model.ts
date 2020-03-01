@@ -6,15 +6,60 @@ import { P40, P41, P42, P43, P44, P45, P46, P47, P48, P49 } from './problems/40-
 import { P50 } from './problems/50-to-59/index';
 
 export interface IProblem {
-  title: string;
-  description: string;
-  getAnswer(): string;
+    title: string;
+    description: string;
+    getAnswer(): string;
 }
 
 export const PROBLEMS: IProblem[] = [
-  new P50(), new P49(), new P48(), new P47(), new P46(), new P45(), new P44(), new P43(), new P42(), new P41(),
-  new P40(), new P39(), new P38(), new P37(), new P36(), new P35(), new P34(), new P33(), new P32(), new P31(),
-  new P30(), new P29(), new P28(), new P27(), new P26(), new P25(), new P24(), new P23(), new P22(), new P21(),
-  new P20(), new P19(), new P18(), new P17(), new P16(), new P15(), new P14(), new P13(), new P12(), new P11(),
-  new P10(), new P9(), new P8(), new P7(), new P6(), new P5(), new P4(), new P3(), new P2(), new P1()
+    new P50(),
+    new P49(),
+    new P48(),
+    new P47(),
+    new P46(),
+    new P45(),
+    new P44(),
+    new P43(),
+    new P42(),
+    new P41(),
+    new P40(),
+    new P39(),
+    new P38(),
+    new P37(),
+    new P36(),
+    new P35(),
+    new P34(),
+    new P33(),
+    new P32(),
+    new P31(),
+    new P30(),
+    new P29(),
+    new P28(),
+    new P27(),
+    new P26(),
+    new P25(),
+    new P24(),
+    new P23(),
+    new P22(),
+    new P21(),
+    new P20(),
+    new P19(),
+    new P18(),
+    new P17(),
+    new P16(),
+    new P15(),
+    new P14(),
+    new P13(),
+    new P12(),
+    new P11(),
+    new P10(),
+    new P9(),
+    new P8(),
+    new P7(),
+    new P6(),
+    new P5(),
+    new P4(),
+    new P3(),
+    new P2(),
+    new P1(),
 ];
